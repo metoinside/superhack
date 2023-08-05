@@ -9,6 +9,7 @@ export default function SignupPage() {
 
     const [user, setUser] = React.useState({
 
+
         username: "",
     })
     const onSignup = async () => {
