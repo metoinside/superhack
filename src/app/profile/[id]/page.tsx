@@ -1,10 +1,14 @@
+import Table from "@/app/components/table";
+
 export default function UserProfile({params}:any){
     return(
         <div className="flex flex-col items-center justify-center min-h-screen py-2">
-            <h1>Profile</h1>
+            <p className="text-4xl">Welcome 
+            <span className="p-1 rounded bg-orange-500 text-black">{params.id}</span>
             <hr/>
+            </p>
             <p className="text-4xl">My Purchases 
-            <span className="p-2 rounded bg-orange-500 text-black">{params.id}</span>
+            <Table/>
             </p>
         </div>
 
