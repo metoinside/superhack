@@ -15,11 +15,7 @@ export default function List() {
                 <tbody>
                     {/* row 1 */}
                     <tr>
-                        <th>
-                            <label>
-                                <input type="checkbox" className="checkbox" />
-                            </label>
-                        </th>
+                        <th> </th>
                         <td>
                             <div className="flex items-center space-x-3">
                                 <div className="avatar">
