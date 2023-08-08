@@ -1,4 +1,4 @@
-import Table from "@/app/components/table";
+import Table from "@/app/components/list";
 
 export default function UserProfile({params}:any){
     return(
