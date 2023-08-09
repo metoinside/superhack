@@ -9,6 +9,7 @@ export default function List() {
                         <th></th>
                         <th className="text-base-200 text-xl">Event</th>
                         <th className="text-base-200 text-xl">Event Detail</th>
+                       
                         <th></th>
                     </tr>
                 </thead>
@@ -27,13 +28,16 @@ export default function List() {
                                     <div className="text-base-200/80 font-bold">Early childhood education</div>
                                     <div className="text-base-200/50">Educate Org</div>
                                 </div>
+                                
                             </div>
+                            
                         </td>
                         <td className="text-base-200/80">
                             Quality pre-primary education is the foundation of a child’s journey: Every stage of education that follows relies on its success.
                             <br />
                             <span className="badge badge-ghost badge-sm bg-accent border-accent">Buy a ticket for $5</span>
                         </td>
+                        
 
                         <th>
                             <button className="btn btn-xs bg-accent border-accent text-base-200 space-y-24">donate</button>

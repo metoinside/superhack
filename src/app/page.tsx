@@ -10,12 +10,12 @@ export default function Home() {
     <div className="bg-sky-950">
       <hr />
       <div className="flex justify-center flex space-x-20 bg-slate-50 py-5">
-      
-      <Card title="Volunteer" image="https://img.icons8.com/?size=512&id=sx7S5ISNrUV7&format=png" description="Do you want to change something for others today?" button="Change now!"/>
-      <Card title="Charity" image="https://img.icons8.com/?size=512&id=113852&format=png" description="Create your campaign to help more!" button="Create new campaign now!"/>
-            </div>
-            <hr className="py-5" />
-<List/>
+
+        <Card title="See Event List" image="https://img.icons8.com/?size=512&id=sx7S5ISNrUV7&format=png" description="Do you want to change something for others today?" nav="/list-detail-page" button="Buy your ticket" />
+        <Card title="Create Events for Charities" image="https://img.icons8.com/?size=512&id=113852&format=png" description="Create your campaign to help more!" nav="/event-create" button="Create new event" />
+      </div>
+      <hr className="py-5" />
+      <List />
     </div>
   )
 }

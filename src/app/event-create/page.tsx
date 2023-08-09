@@ -14,7 +14,7 @@ export default function EventCreate() {
     }
     return (
 
-        <div className="flex flex-col justify-top min-h-screen py-20">
+        <div className="flex flex-col justify-top items-center min-h-screen py-20">
             <h1 className="text-center text-2xl py-2">Event Creation</h1>
             <hr />
             <input
