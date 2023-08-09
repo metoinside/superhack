@@ -19,6 +19,6 @@ export default function VerifyID() {
             credential_types={[CredentialType.Orb]} // optional, defaults to ['orb']
             enableTelemetry // optional, defaults to false
         >
-            {({ open }) => <button className="text-white bg-[#3496FF] hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" onClick={open}>Verify with World ID</button>}
+            {({ open }) => <button className="text-white bg-[#3F9BFB] border-sky-500 border rounded-lg font-medium text-sm px-5 py-2.5 text-center mr-2 mb-2" onClick={open}>Verify with World ID</button>}
         </IDKitWidget>)
 }
