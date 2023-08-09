@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import ActionButton from './actionButton'
+import VerifyID from './worldcoin-verify/verify'
 
 export default function Navbar() {
     return (
@@ -13,7 +14,7 @@ export default function Navbar() {
             <div className="flex-none">
                 <ul className="menu menu-horizontal px-1">
 
-
+                    <VerifyID />
                     <button className="btn btn-s text-accent bg-base-200 space-y-24">About Us</button>
                     <ActionButton />
                 </ul>
