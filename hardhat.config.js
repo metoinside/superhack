@@ -5,51 +5,50 @@ require('dotenv').config()
 module.exports = {
   solidity: "0.8.19",
   networks: {
-    linea: {
+    'linea': {
       url: `https://rpc.goerli.linea.build`,
       accounts: [process.env.DEPLOYER],
     },
-    sepolia: {
+    'sepolia': {
       url: `https://sepolia.infura.io/v3/${process.env.INFURA_KEY}`,
       accounts: [process.env.DEPLOYER],
     },
-    goerli: {
+    'goerli': {
       url: `https://goerli.infura.io/v3/${process.env.INFURA_KEY}`,
       accounts: [process.env.DEPLOYER],
     },
-    zkEVM: {
+    'zkEVM': {
       url: "https://rpc.public.zkevm-test.net",
       accounts: [process.env.DEPLOYER],
     },
-    modeSepolia: {
+    'mode-sepolia': {
       url: "https://sepolia.mode.network/",
       accounts: [process.env.DEPLOYER],
       gasPrice: 35000000000,
       saveDeployments: true,
     },
-    zoraGoerli: {
+    'zora-goerli': {
       url: 'https://testnet.rpc.zora.energy/',
       accounts: [process.env.DEPLOYER],
+      gasPrice: 1000000000,
     },
-    zoraMainnet: {
+    'zora-mainnet': {
       url: 'https://mainnet.rpc.zora.energy/',
       accounts: [process.env.DEPLOYER],
     },
     'base-mainnet': {
       url: 'https://mainnet.base.org',
-      accounts: [process.env.WALLET_KEY as string],
+      accounts: [process.env.DEPLOYER],
       gasPrice: 1000000000,
     },
-    // for testnet
     'base-goerli': {
       url: 'https://goerli.base.org',
-      accounts: [process.env.WALLET_KEY as string],
+      accounts: [process.env.DEPLOYER],
       gasPrice: 1000000000,
     },
-    // for local dev environment
     'base-local': {
       url: 'http://localhost:8545',
-      accounts: [process.env.WALLET_KEY as string],
+      accounts: [process.env.DEPLOYER],
       gasPrice: 1000000000,
     },
   },

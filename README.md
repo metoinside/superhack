@@ -36,3 +36,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 Deployed Smart contracts: 
 - Mode Sepolia: [0xCDe17EBe7C3d1af261cD8FBb5D1D1f9DED680BC5](https://sepolia.explorer.mode.network/address/0xCDe17EBe7C3d1af261cD8FBb5D1D1f9DED680BC5)
+- Zora Goerli: [0xdf2a89FbEdcf9462b7E10413Ee6eA28e8106937d](https://testnet.explorer.zora.energy/tx/0x1befc0e1ba833a132cb05638ef035270cfe796fd1ebf28687135158da7322e70)
+- Base Goerli: [0x08F7de539B8F6082dc88baD8E13dE6C0c4Fa64A6](https://goerli.basescan.org/address/0x08f7de539b8f6082dc88bad8e13de6c0c4fa64a6)
