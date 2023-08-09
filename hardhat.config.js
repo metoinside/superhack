@@ -10,7 +10,7 @@ module.exports = {
       accounts: [process.env.DEPLOYER],
     },
     sepolia: {
-      url: `https://sepolia.infura.io/v3/45cb05f851444a51bfd995aef63494d9`,
+      url: `https://sepolia.infura.io/v3/${process.env.INFURA_KEY}`,
       accounts: [process.env.DEPLOYER],
     },
     goerli: {
@@ -26,6 +26,31 @@ module.exports = {
       accounts: [process.env.DEPLOYER],
       gasPrice: 35000000000,
       saveDeployments: true,
-    }
+    },
+    zoraGoerli: {
+      url: 'https://testnet.rpc.zora.energy/',
+      accounts: [process.env.DEPLOYER],
+    },
+    zoraMainnet: {
+      url: 'https://mainnet.rpc.zora.energy/',
+      accounts: [process.env.DEPLOYER],
+    },
+    'base-mainnet': {
+      url: 'https://mainnet.base.org',
+      accounts: [process.env.WALLET_KEY as string],
+      gasPrice: 1000000000,
+    },
+    // for testnet
+    'base-goerli': {
+      url: 'https://goerli.base.org',
+      accounts: [process.env.WALLET_KEY as string],
+      gasPrice: 1000000000,
+    },
+    // for local dev environment
+    'base-local': {
+      url: 'http://localhost:8545',
+      accounts: [process.env.WALLET_KEY as string],
+      gasPrice: 1000000000,
+    },
   },
 }
