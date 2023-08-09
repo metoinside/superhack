@@ -9,7 +9,7 @@ export default function Navbar() {
         <div className="navbar bg-accent text-base-200">
             <div className="flex-1">
 
-                <a className="btn btn-ghost normal-case text-xl">BuyTicket</a>
+                <a href='/' className="btn btn-ghost normal-case text-xl">BuyTicket</a>
             </div>
             <div className="flex-none">
                 <ul className="menu menu-horizontal px-1">
