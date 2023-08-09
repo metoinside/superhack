@@ -40,7 +40,7 @@ export default function List() {
                         
 
                         <th>
-                            <button className="btn btn-xs bg-accent border-accent text-base-200 space-y-24">donate</button>
+                            <button className="btn btn-xs bg-accent border-accent text-base-200 space-y-24">Buy Ticket</button>
                         </th>
                     </tr>
                     {/* row 2 */}
@@ -70,7 +70,7 @@ export default function List() {
                         </td>
 
                         <th>
-                            <button className="btn btn-xs bg-accent border-accent text-base-200 space-y-24">donate</button>
+                            <button className="btn btn-xs bg-accent border-accent text-base-200 space-y-24">Buy Ticket</button>
                         </th>
                     </tr>
                     {/* row 3 */}
@@ -100,7 +100,7 @@ export default function List() {
                         </td>
 
                         <th>
-                            <button className="btn btn-xs bg-accent border-accent text-base-200 space-y-24">donate</button>
+                            <button className="btn btn-xs bg-accent border-accent text-base-200 space-y-24">Buy Ticket</button>
                         </th>
                     </tr>
                     {/* row 4 */}
@@ -130,7 +130,7 @@ export default function List() {
                         </td>
 
                         <th>
-                            <button className="btn btn-xs bg-accent border-accent text-base-200 space-y-24">donate</button>
+                            <button className="btn btn-xs bg-accent border-accent text-base-200 space-y-24">Buy Ticket</button>
                         </th>
                     </tr>
                 </tbody>
