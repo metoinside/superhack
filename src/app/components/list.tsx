@@ -15,6 +15,7 @@ export default function List() {
                 </thead>
                 <tbody>
                     {/* row 1 */}
+                    
                     <tr>
                         <th> </th>
                         <td>
