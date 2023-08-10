@@ -9,7 +9,7 @@ export default function ActionButton() {
     return (
         <>
             <WagmiConfig config={wagmiConfig}>
-                <Web3Button />
+                <Web3Button/>
 
             </WagmiConfig>
 
