@@ -45,12 +45,22 @@ export async function POST(request: NextRequest, response: NextResponse, masa: a
 
 export async function GET(){
     const allData= await User.find();
-    
+    allData.map((user)=>
+    ({
+        eventName: user.eventName,
+        eventDetails: user.eventDetails,
+        respOrg: user.respOrg,
+        targetGroup: user.targetGroup
+
+    })
+    )
     return NextResponse.json({
-        message: "All data is here.",
-        success: true,
+        props:{
         allData
+        }
+        
     }
+    
     )
     
 }
