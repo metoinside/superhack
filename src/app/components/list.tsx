@@ -17,7 +17,7 @@ export default function List() {
     }
 
     useEffect(() => {
-        //loadData()
+        loadData()
     }, []
 
     )

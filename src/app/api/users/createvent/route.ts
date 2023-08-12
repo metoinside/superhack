@@ -2,12 +2,14 @@ import { connect } from "@/dbConfig/dbConfig";
 import User from "@/models/userModel";
 import { NextRequest, NextResponse } from "next/server";
 import jwt from "jsonwebtoken";
+import { useAccount } from "wagmi";
 
 connect()
 
 
 
 export async function POST(request: NextRequest, response: NextResponse, masa: any) {
+
 
 
     const reqBody = await request.json()

@@ -8,12 +8,9 @@ import Link from "next/link";
 export default function ActionButton() {
     return (
         <>
-            <WagmiConfig config={wagmiConfig}>
-                <Web3Button/>
 
-            </WagmiConfig>
+            <Web3Button/>
 
-            <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
         </>
     );
 }
