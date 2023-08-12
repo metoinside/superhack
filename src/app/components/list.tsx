@@ -17,7 +17,7 @@ export default function List() {
     }
 
     useEffect(() => {
-        loadData()
+        //loadData()
     }, []
 
     )
@@ -62,7 +62,7 @@ export default function List() {
                     <td className="text-base-200/80">
                         {m.eventDetails}
                         <br />
-                        <span className="badge badge-ghost badge-sm bg-accent border-accent">Buy a ticket for $5</span>
+                        <span className="badge badge-ghost badge-sm bg-accent border-accent">{m.targetGroup}</span>
                     </td>
 
 
