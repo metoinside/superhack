@@ -4,6 +4,11 @@
 // It will be used by the Solidity compiler to validate its version.
 pragma solidity ^0.8.0;
 
+//contract to collect all created events.
+
+contract    
+
+
 // This is the main building block for smart contracts.
 contract Token {
     // Some string type variables to identify the token.

@@ -1,8 +1,9 @@
+
 import { connect } from "@/dbConfig/dbConfig";
 import User from "@/models/userModel";
 import { NextRequest, NextResponse } from "next/server";
 import jwt from "jsonwebtoken";
-import { useAccount } from "wagmi";
+
 
 connect()
 
@@ -11,9 +12,9 @@ connect()
 export async function POST(request: NextRequest, response: NextResponse, masa: any) {
 
 
-
     const reqBody = await request.json()
-    const { eventDetails, eventName, respOrg, targetGroup } = reqBody
+    const { eventDetails, eventName, respOrg, targetGroup, address} = reqBody
+    console.log(reqBody)
 
     //check if user already exists
     const user = await User.findOne({ eventName })
@@ -26,8 +27,9 @@ export async function POST(request: NextRequest, response: NextResponse, masa: a
         eventDetails,
         eventName,
         respOrg,
-        targetGroup
-    })
+        targetGroup,
+        address,
+        })
 
     const savedUser = await newUser.save()
     console.log(savedUser);
@@ -46,13 +48,16 @@ export async function POST(request: NextRequest, response: NextResponse, masa: a
 }
 
 export async function GET(){
+    
     const allData= await User.find();
     allData.map((user)=>
     ({
         eventName: user.eventName,
         eventDetails: user.eventDetails,
         respOrg: user.respOrg,
-        targetGroup: user.targetGroup
+        targetGroup: user.targetGroup,
+        //address:user.address
+         
 
     })
     )

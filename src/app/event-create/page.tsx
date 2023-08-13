@@ -4,9 +4,12 @@ import React from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation"
 import { useState } from "react"
+import { useAccount } from "wagmi";
+
 
 
 export default function EventCreate() {
+    const {address}= useAccount();
     const router = useRouter();
     const [user, setUser] = React.useState({
 
@@ -14,10 +17,13 @@ export default function EventCreate() {
         eventDetails: "",
         targetGroup: "",
         respOrg: "",
+        address:"",
+        
     })
 
     async function onCreate() {
         try {
+           user.address=address || ""
             const response = await axios.post("/api/users/createvent", user)
         } catch (error: any) {
             console.log("Event creation failed", error.message);
@@ -68,7 +74,7 @@ export default function EventCreate() {
             />
 
             <button onClick={onCreate} className="self-center p-3 rounded-lg mb-4 bg-accent text-base-200 focus:outline-none focus:bg-accent focus:text-base-200">Create Event</button>
-
+           
 
 
         </div>
