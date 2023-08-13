@@ -10,6 +10,7 @@ import { useAccount } from "wagmi";
 
 export default function EventCreate() {
     const {address}= useAccount();
+    const [isCreated, setisCreated]= React.useState(false)
     const router = useRouter();
     const [user, setUser] = React.useState({
 
@@ -25,9 +26,11 @@ export default function EventCreate() {
         try {
            user.address=address || ""
             const response = await axios.post("/api/users/createvent", user)
+            setisCreated(true)
         } catch (error: any) {
+            
             console.log("Event creation failed", error.message);
-
+            setisCreated(false)
 
         }
 
@@ -75,6 +78,7 @@ export default function EventCreate() {
 
             <button onClick={onCreate} className="self-center p-3 rounded-lg mb-4 bg-accent text-base-200 focus:outline-none focus:bg-accent focus:text-base-200">Create Event</button>
            
+            {isCreated? <div>Creation successfull</div>: "" }
 
 
         </div>
