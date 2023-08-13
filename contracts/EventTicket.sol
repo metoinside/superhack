@@ -1,42 +1,45 @@
+// SPDX-License-Identifier: Unlicensed
+pragma solidity ^0.8.15;
 
-pragma solidity ^0.8.0;
+contract CrowdfundingProject {
+    //defining state variables
+    string public projTitle;
+    string public projDescription;
+    //uint256 public goalAmount;
+    uint256 public raisedAmount;
+    //address ownerWallet; //address where amount to be transfered
 
-contract EventTicket {
-  
-   // address [] public respOrg;
-    
-        string public eventName;
-        string public evenDetails;
-        string public respOrg;
-        string public targetGroup;
-        uint256 public ticketPrice;
-        address respOrgWallet;
-
-        event Purchased(
-            address indexed purchaser,
-            uint256 indexed amount,
-            uint256 indexed timestamp
-        );
-    
+    event Funded(
+        address indexed donar,
+        uint256 indexed amount,
+        uint256 indexed timestamp
+    );
 
     constructor(
-        string memory eventName,
-        string memory eventDetails,
-        uint256 public ticketPri;
-        address respOrgWallet_
-
-    ){
-        eventName=eventName;
-        evenDetails=eventDetails;
-        ticketPrice= ticketPri;
-        respOrgWallet=respOrgWallet_;
+        string memory projectTitle,
+        //uint256 projgoalAmount,
+        string memory projDescript
+        //address ownerWallet_
+    ) {
+        //mapping values
+        projTitle = projectTitle;
+        //goalAmount = projgoalAmount;
+        projDescription = projDescript;
+        //ownerWallet = ownerWallet_;
     }
 
-    function buyEvent() public payable{
-        require(ticketPrice,"Ticket is bought");
-        
-        respOrg.transfer(msg.value);
-        emit Purchased(msg.sender,msg.value,block.timestamp);
-    }
+    //donation function
+    function makeDonation() public payable {
+        //if goal amount is achieved, close the proj
+        //require(goalAmount > raisedAmount, "GOAL ACHIEVED");
 
+        //record walletaddress of donor
+        //(bool success, ) = payable(ownerWallet).call{value: msg.value}("");
+        //require(success, "VALUE NOT TRANSFERRED");
+
+        //calculate total amount raised
+        raisedAmount += msg.value;
+
+        emit Funded(msg.sender, msg.value, block.timestamp);
+    }
 }

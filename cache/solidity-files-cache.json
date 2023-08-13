@@ -1,10 +1,10 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/Users/metoinside/Documents/superhack/contracts/Token.sol": {
-      "lastModificationDate": 1691612600597,
-      "contentHash": "51a921f514ec411a6b8b5541ec65ad33",
-      "sourceName": "contracts/Token.sol",
+    "C:\\Users\\begum\\OneDrive\\Desktop\\visual-studio\\superhack\\contracts\\EventTicket.sol": {
+      "lastModificationDate": 1691926257274,
+      "contentHash": "5178fe21a9974399c02dcf13e1fc65e8",
+      "sourceName": "contracts/EventTicket.sol",
       "solcConfig": {
         "version": "0.8.19",
         "settings": {
@@ -30,10 +30,10 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.8.0"
+        "^0.8.15"
       ],
       "artifacts": [
-        "Token"
+        "CrowdfundingProject"
       ]
     }
   }

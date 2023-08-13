@@ -1,11 +1,29 @@
 "use client"
 import axios from "axios"
 import react, { useEffect, useState } from "react"
+import { useAccount, useContractWrite } from "wagmi"
+import contractArtifact from "../../../artifacts/contracts/EventTicket.sol/CrowdfundingProject.json";
 
 
 
 export default function List() {
     const [masa,setMasa]=react.useState([])
+
+    const {address, isConnected} = useAccount()    
+
+
+    const {data, isLoading, isSuccess, write} = useContractWrite({
+        address: "0x8fB46b2285703B2420E99d3A762e0FeCA615d80F",
+        abi: contractArtifact.abi,
+        functionName:"makeDonation",
+        account: address
+    })
+
+    const buyTicket =  () => {
+        write();
+    }
+
+
 
 
     const loadData = async () => {
@@ -67,13 +85,13 @@ export default function List() {
 
 
                     <th>
-                        <button className="btn btn-xs bg-accent border-accent text-base-200 space-y-24">Buy Ticket</button>
+                        <button onClick={buyTicket} className="btn btn-xs bg-accent border-accent text-base-200 space-y-24">Buy Ticket</button>
                     </th>
                 </tr>
                 )
             }
             )}
-
+<div>Transactions : {JSON.stringify(data)}</div>
                 </tbody>
                 {/* foot */}
 
