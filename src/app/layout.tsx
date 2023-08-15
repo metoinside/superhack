@@ -25,11 +25,13 @@ export default function RootLayout({
       <body className={inter.className}>
         <WagmiConfig config={wagmiConfig}>
 
-          <Navbar />
+          
           {children}
           <Footer />
+
           <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
         </WagmiConfig>
+        
 
       </body>
 

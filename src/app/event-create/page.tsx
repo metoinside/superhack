@@ -5,10 +5,12 @@ import axios from "axios";
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 import { useAccount } from "wagmi";
+import Navbar from "../components/navbar";
 
 
 
 export default function EventCreate() {
+    <Navbar/>
     const {address}= useAccount();
     const [isCreated, setisCreated]= React.useState(false)
     const router = useRouter();

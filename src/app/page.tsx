@@ -9,6 +9,9 @@ export default function Home() {
   
 
   return (
+    <div>
+    <Navbar/>,
+        
     <div className="bg-sky-950">
 
       <hr />
@@ -19,6 +22,7 @@ export default function Home() {
       </div>
       <hr className="py-5" />
       <List />
+    </div>
     </div>
   )
 }
